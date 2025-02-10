@@ -31,11 +31,13 @@
 
             //Jquery funciona a traves de selectores. Este es el selector del ID. SELECCION CON $("#loquequeremosseleccionar")
             $("#f").submit(function (e) {
-                e.preventDefault();
+               
 
                 let arg = $("#nombre").val();
-                if (!validarLongitud (arg, 3, 10))                   
+                if (!validarLongitud (arg, 3, 10)) {                  
                  $("#nombre").next().removeClass("valido").addClass("novalido");
+                 e.preventDefault();
+                }
                 
 
             });
@@ -51,12 +53,12 @@
             });
 
             $("#f").submit(function (e) {
-                e.preventDefault();
-
-                let arg = $("#apellidos").val();
-                if (!validarLongitud (arg,5,20))                   
-                 $("#apellidos").next().removeClass("valido").addClass("novalido");
                 
+                let arg = $("#apellidos").val();
+                if (!validarLongitud (arg,5,20)) {                  
+                 $("#apellidos").next().removeClass("valido").addClass("novalido");
+                 e.preventDefault();
+                }
 
             });
 
