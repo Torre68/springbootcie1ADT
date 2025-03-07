@@ -8,4 +8,16 @@ public interface LibroRepository {
 
     List<Libro> buscarTodos ();
 
+    List<Libro> buscarTodosPorTitulo (String titulo);
+
+    List<Libro> buscarTodosPorAutor (String autor);
+
+    Libro buscarUno (String isbn);
+
+    void insertar (Libro libro);
+
+    void borrar (Libro libro);
+
+    
+
 }

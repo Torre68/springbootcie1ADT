@@ -1,0 +1,28 @@
+GET http://localhost:8080/webapi/libros
+
+#########
+
+GET http://localhost:8080/webapi/libros?titulo=Harry Potter
+
+########
+
+GET http://localhost:8080/webapi/libros?autor=Rowling
+
+########
+GET http://localhost:8080/webapi/libros/01
+
+########
+POST http://localhost:8080/webapi/libros
+content-type: application/json
+
+{
+"isbn": "04",
+"titulo": "prueba",
+"autor": "prueba",
+"paginas": 999
+}
+
+#########
+
+DELETE http://localhost:8080/webapi/libros/prueba
+
