@@ -26,3 +26,26 @@ content-type: application/json
 
 DELETE http://localhost:8080/webapi/libros/prueba
 
+
+###################PROBANDO EJEMPLAR########################3
+
+GET http://localhost:8080/webapi/ejemplar
+
+##################################
+
+GET http://localhost:8080/webapi/ejemplar/isbn/01/numero/1
+
+########
+POST http://localhost:8080/webapi/ejemplar
+content-type: application/json
+
+{
+"isbn": "05",
+"numero": "3",
+"disponible": "true"
+
+}
+
+#########
+
+DELETE http://localhost:8080/webapi/ejemplar/isbn/01/numero/22222222

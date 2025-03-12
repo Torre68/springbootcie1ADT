@@ -1,0 +1,24 @@
+package es.curso.springboot1.repositories;
+
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import es.curso.springboot1.negocio.Ejemplar;
+
+
+import org.springframework.jdbc.core.RowMapper;
+import org.springframework.lang.Nullable;
+
+
+public class EjemplarRowMapper implements RowMapper<Ejemplar>{
+
+    @Override
+    @Nullable
+    public Ejemplar mapRow(ResultSet rs, int rowNum) throws SQLException {
+       return new Ejemplar (rs.getString("isbn"), rs.getInt("numero"), 
+       rs.getBoolean("disponible"));
+    }
+
+   
+    }
+
+
